@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+:root{
+    --fontepadrao: Verdana, Geneva, Tahoma, sans-serif;
+    --fontetitulo: "Passion One", serif;
+    --fonteconteudo: "Sriracha", serif;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body{
+    /* o tamanho mínimo será de 100% da altura do viewport. */
+    min-height: 100vh; 
+    
+    background-color: darkgrey;
+    font-family: var(--fontepadrao);
+}
+
+header{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header > h1 {
+    padding-top: 50px;
+
+    /* essa propriedade com esse valor deixa todas as letras maiúsculas mas com as letras iniciais um pouco maior e sem que pareça estar "gritando"*/
+    font-variant: small-caps;
+    font-family: var(--fontetitulo);
+
+    /* o valor 'vw' signfica o tamanho em relação a largura da viewport. Nesse caso, estou dizendo que quero o tamanho da minha fonte 10% da largura total da tela. /*
+    /* essa não é a melhor maneira de fazer isso, mas é um recurso. Mais pra frente irei estudar 'mediaquery', onde irá fazer isso de uma maneira melhor. */
+    font-size: 10vw;
+
+    /* 'text-transform: uppercase;' é usado caso queira deixar todas as letras maiúsculas. */
+}
+
+header > p {
+    padding-bottom: 50px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+a:hover{
+    color: lightgrey;
+    text-decoration: underline;
+}
+
+
+
+section{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em;
+    padding-left: 30px;
+    font-family: var(--fonteconteudo);
+    font-size: 3.5vw;
+}
+section > p{
+    padding-bottom: 2em;
+}
+
+.normal {
+    background-color: white;
+    color: black;
+}
+
+#borda {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    margin-bottom: 20px;
+}
+.imagem{
+    background-color: rgb(85, 84, 84);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.667);
+    background-attachment: fixed;
+}
+
+.imagem > p{
+    background-color: rgba(149, 149, 149, 0.449);
+    display: inline-block;
+    padding: 6px;
+    text-shadow: 1px 1px 0px black;
+}
+
+#img01{
+    background-image: url(../desafio012/imagens/background001.jpg);
+    background-position: right center;
+    background-size: cover;
+}
+
+#img02{
+    background-image: url(../desafio012/imagens/background002.jpg);
+    background-size: cover;
+}
+
+footer {
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
